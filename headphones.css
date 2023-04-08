@@ -1,0 +1,628 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #121212;
+}
+
+h1,h2,h3,p{
+	color: white;
+}
+
+button,
+input{
+	border: none;
+	outline: none;
+}
+
+button{
+	cursor: pointer;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+/* ========== SECTION RESUABLE CSS ========== */
+.section{
+	padding: 4rem 0 2rem;
+}
+
+.section-title{
+	text-transform: uppercase;
+	font-size: 4rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	font-family: 'Raleway Dots', cursive;
+
+}
+
+.section-title-gradient{
+	background: linear-gradient(hsl(var(206) 4%, 24%));
+}
+
+/* ========== LAYOUT REUSABLE CSS ========== */
+.main{
+	overflow: hidden;
+}
+
+.container{
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.grid{
+	display: grid;
+}
+
+/* ========== HEADER ========== */
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
+	z-index: 1001 ;
+}
+
+/* ========== NAVBAR ========== */
+.nav{
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo{
+	display: flex;
+	width: 1.3rem;
+}
+
+.nav-toggle{
+	color: white;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.nav-close{
+	color: white;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.nav-link{
+	color: white;
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.9rem;
+}
+
+@media screen and (max-width: 767px){
+	.nav-menu{
+		position: fixed;
+		background-color: #121212;
+		border-left: 1px solid lightgrey;
+		top: 0;
+		right: -100%;
+		width: 70%;
+		height: 100vh;
+		padding: 11rem 0 3rem;
+		transition: all 2s ease;
+	}
+}
+
+.nav-list{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 6rem;
+}
+
+.nav-close{
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+}
+
+/* ========== Show Menu ========== */
+.show-menu{
+	right: 0;
+}
+
+.scroll-header{
+	background-color: #212121;
+}
+
+/* ========== HOME ========== */
+.home-img{
+	width: 250px;
+	position: absolute;
+	top: -16rem;
+	right: 1.5rem;
+}
+
+.home-data{
+	padding-top: 5rem;
+}
+
+.home-header{
+	position: relative;
+}
+
+.home-title{
+	font-size: 5rem;
+	text-transform: uppercase;
+	top: -5rem;
+	line-height: 6rem;
+	letter-spacing: 4px;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.home-subtitle{
+	font-size: 3rem;
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: 'Questrial', sans-serif;
+}
+
+.home-title-description{
+	margin-bottom: 1rem;
+	font-family: 'Comfortaa', cursive;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	letter-spacing: 4px;
+}
+
+.home-description{
+	margin-bottom: 2.5rem;
+	line-height: 1.5rem;
+	font-family: 'Manrope', sans-serif;
+	letter-spacing: 1px;
+	font-size: 0.75rem;
+}
+
+.home-price{
+	font-size: 1rem;
+	font-weight: 700;
+	margin-left: 0.75rem;
+}
+
+/* ========== Buttons ========== */
+.button{
+	display: inline-flex;
+	font-size: 0.8rem;
+	font-family: 'Comfortaa', cursive;
+	background-color: black;
+	color: white;
+	padding: 1rem 1rem;
+	border-radius: 1rem;
+	opacity: 0.4;
+	transition: all 2s ease;
+}
+
+.button:hover{
+	opacity: 1;
+	transform: translateY(-4px);
+}
+
+.button-flex{
+	display: inline-flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+/* ========== Sponsor ========== */
+.sponsor-img{
+	width: 90px;
+}
+
+
+.sponsor-container{
+	grid-template-columns: repeat(auto-fit, minmax(110px,1fr));
+	row-gap: 5rem;
+	justify-items: center;
+	align-items: center;
+}
+
+/* ========== Specs ========== */
+
+.specs-container{
+	position: relative;
+}
+
+.spec-content{
+	row-gap: 2rem;
+}
+
+.specs-data{
+	display: grid;
+	row-gap: .5rem;
+	margin: 12px 0;
+}
+
+.spec-data span{
+	color: white;
+}
+
+.specs-icon{
+	font-size: 1.2rem;
+	color: white;
+}
+
+.specs-title{
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.specs-subtitle{
+	font-size: 0.8rem;
+	color: white;
+}
+
+.specs-data:nth-child(1),
+.specs-data:nth-child(4){
+	margin-left: 1.5rem;
+}
+
+.specs-img{
+	width: 250px;
+	position: absolute;
+	top: 2rem;
+	right: 4rem;
+}
+
+/* ========== CASE ========== */
+.case-container{
+	position: relative;
+	grid-template-columns: repeat(2,1fr);
+}
+
+.case-data{
+	padding: 5rem 0 3rem;
+}
+
+.case-img{
+	width: 250px;
+	position: absolute;
+	left: -2rem;
+}
+
+.case-description{
+	margin-bottom: 1.5rem;
+	line-height: 2.3rem;
+	font-family: 'Manrope', sans-serif;
+}
+
+/* ========== Discount ========== */
+.discount-container{
+	position: relative;
+	background-color: #010101;
+	padding: 2rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.discount-title{
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	font-family: 'Comfortaa', cursive;
+}
+
+.discount-description{
+	margin-bottom: 1rem;
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.8rem;
+}
+
+.discount-img{
+	width: 180px;
+	position: absolute;
+	top: 0rem;
+	right: 4rem;
+}
+
+/* ========== Products ========= */
+.products-container{
+	grid-template-columns: repeat(2,1fr);
+	gap: 5rem 2rem;
+	padding-top: 3rem;
+}
+
+.products-card{
+	position: relative;
+	height: 132px;
+	background-color: #212121;
+	padding: 1rem;
+	border-radius: 1rem;
+	display: grid;
+}
+
+.products-img{
+	width: 80px;
+	position: absolute;
+	inset: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+	right: -2rem;
+	top: -2rem;
+}
+
+.products-content{
+	align-self: flex-end;
+}
+
+.products-title{
+	margin-bottom: 0.2rem;
+	font-family: 'Comfortaa', cursive;
+	letter-spacing: 1px;
+}
+
+.products-price{
+	color: white;
+	margin: 1rem 0;
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.7rem;
+}
+
+.product-btn{
+	position: absolute;
+	right: .5rem;
+	bottom: .5rem;
+	padding: 1rem;
+	border-radius: 4rem;
+}
+
+
+/* =========== FOOTER ========== */
+.footer-container{
+	grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+	row-gap: 2rem;
+}
+
+.footer-logo{
+	width: 2rem;
+}
+
+.footer-title{
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.footer-links{
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+
+.footer-link{
+	color: white;
+}
+
+.footer-form{
+	display: flex;
+	column-gap: 1rem;
+	background-color: #212121;
+	padding: 0.5rem .75rem;
+	border-radius: 1rem;
+	align-items: center;
+}
+
+.form-social{
+	padding-left:10px;
+}
+
+.footer-input{
+	background-color: transparent;
+	width: 100%;
+	height: 30px;
+}
+
+.footer-social{
+	display: flex;
+	column-gap: 4rem;
+}
+
+.footer-social-link{
+	display: inline-flex;
+	color: white;
+	background-color: #212121;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.footer-content input{
+	padding-left: 0.5rem;
+}
+
+/* ========== Media Quieries =========== */
+
+/* ========== For Small Devices ========== */
+@media screen and (max-width: 340px){
+	.container{
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.section-title{
+		font-size: 2.5rem;
+	}
+
+	.home-img{
+		width: 200px;
+		top: -13rem;
+	}
+
+	.home-title{
+		top: -4rem;
+		font-size: 3rem;
+	}
+
+	.home-data{
+		padding-top: 1rem;
+	}
+
+	.home-description{
+		font-size: 0.9rem;
+	}
+
+	.specs-img{
+		width: 200px;
+	}
+
+	.case-container{
+		grid-template-columns: .6fr 1fr;
+	}
+
+	.case-img{
+		width: 200px;
+		top: -2rem;
+		left: -9rem;
+	}
+
+	.case-data{
+		padding: 0;
+	}
+
+	.products-container{
+		grid-template-columns: 142px;
+		justify-content: center;
+	}
+}
+
+/* ========== For Medium Devices ========== */
+@media screen and (min-width: 567px){
+	.home-container{
+		grid-template-columns: .8fr 1fr;
+	}
+
+	.home-data{
+		padding-top: 2rem;
+	}
+
+	.home-img{
+		top: -7rem;
+		left: 0;
+	}
+
+	.specs-img{
+		position: initial;
+	}
+
+	.specs-container{
+		grid-template-columns: repeat(2,1fr);
+		justify-items: center;
+		align-items: center;
+	}
+
+	.case-img{
+		position: initial;
+	}
+
+	.case-data{
+		padding: 0;
+	}
+
+	.case-container{
+		grid-template-columns: max-content 250px;
+		justify-content: center;
+		align-items: center;
+		column-gap: 2rem;
+	}
+
+	.discount-img{
+		position: initial;
+	}
+
+	.discount-container{
+		grid-template-columns: repeat(2,1fr);
+		align-items: center;
+		align-items: center;
+	}
+}
+
+@media screen and (min-width: 767px){
+	body{
+		margin: 0;
+	}
+
+	.section{
+		padding: 6rem 0 2rem;
+	}
+
+	.nav{
+		height: 11vh;
+	}
+
+	.nav-logo{
+		width: 2rem;
+	}
+
+	.nav-list{
+		flex-direction: row;
+		column-gap: 3.5rem;
+	}
+
+	.nav-link{
+		font-size: 0.7rem;
+	}
+
+	.nav-toggle,
+	.nav-close{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
